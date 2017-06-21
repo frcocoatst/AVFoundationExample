@@ -253,7 +253,7 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
         let cameraImage = CIImage(cvPixelBuffer: pixelBuffer!)
 
-        // let filter = CIFilter(name: "CIComicEffect")
+        let filter = CIFilter(name: "CIComicEffect")
         // let filter = CIFilter(name: "CISepiaTone")
         // let filter = CIFilter(name: "CIColorInvert")
         // let filter = CIFilter(name: "CILineOverlay")
@@ -269,7 +269,7 @@ class ViewController: NSViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         // let filter = CIFilter(name: "CIGloom", withInputParameters: ["inputRadius": 10.0, "inputIntensity":1.5])
         
-        let filter = CIFilter(name: "CISepiaTone")
+        //let filter = CIFilter(name: "CISepiaTone")
 
         filter!.setValue(cameraImage, forKey: kCIInputImageKey)
         
